@@ -82,6 +82,7 @@ module.exports = shipit => {
       await shipit.remote(
         `pm2 start ${ecosystemFilePath} --env production --watch true`
       );
+      await shipit.remote('pm2 save');
       // Add pm2 save later - to it will run on start
     })
   
