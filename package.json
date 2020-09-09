@@ -8,6 +8,10 @@
     "dev": "nodemon src/app/app",
     "start": "node src/app/app"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibaraness/demo-server.git"
+  },
   "author": "Idan Baraness",
   "license": "ISC",
   "dependencies": {
