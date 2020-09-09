@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app/app",
-    "start": "node src/app/app"
+    "start": "node src/app/app",
+    "deploy-prod1": "npx shipit production1 deploy",
+    "deploy-prod2": "npx shipit production2 deploy",
+    "deploy-local": "npx shipit default deploy"
   },
   "repository": {
     "type": "git",

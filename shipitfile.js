@@ -14,12 +14,16 @@ module.exports = shipit => {
           dirs: ['node_modules']
         }
       },
-      production: {
+      production1: {
         servers: [
           {
             host: '192.168.230.100',
             user: 'ibaraness'
-          },
+          }
+        ]
+      },
+      production2: {
+        servers: [
           {
             host: '192.168.230.101',
             user: 'ibaraness'
