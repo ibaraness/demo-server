@@ -49,7 +49,7 @@ module.exports = shipit => {
 
       const ecosystem = `
       module.exports = {
-        app:[
+        apps:[
           {
             name: '${appName}',
             script: '${shipit.releasePath}/src/app/app.js',
