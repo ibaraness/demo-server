@@ -36,7 +36,7 @@ module.exports = shipit => {
     );
   
     // Our listeners and tasks will go here
-    shipit.on('update', () => {
+    shipit.on('updated', () => {
         shipit.start('npm-install', 'copy-config');
     });
       
