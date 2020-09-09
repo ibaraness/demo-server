@@ -78,8 +78,11 @@ module.exports = shipit => {
     });
 
     shipit.blTask('pm2-server', async ()=>{
-      //TODO Later
-      console.log("pm2 server work!")
+      await shipit.remote(`pm2 delete -s ${appName} || :`);
+      await shipit.remote(
+        `pm2 start ${ecosystemFilePath} --env production --watch true`
+      );
+      // Add pm2 save later - to it will run on start
     })
   
   };
