@@ -69,6 +69,7 @@ module.exports = shipit => {
         if(err) throw err;
         console.log('File created successfully!');
       });
+      console.log("ecosystem.config.js file", ecosystem.config.js);
 
       await shipit.copyToRemote('ecosystem.config.js', ecosystemFilePath);
     });
@@ -78,10 +79,10 @@ module.exports = shipit => {
     });
 
     shipit.blTask('pm2-server', async ()=>{
-      await shipit.remote(`pm2 delete -s ${appName} || :`);
-      await shipit.remote(
-        `pm2 start ${ecosystemFilePath} --env production --watch true`
-      );
+      // await shipit.remote(`pm2 delete -s ${appName} || :`);
+      // await shipit.remote(
+      //   `pm2 start ${ecosystemFilePath} --env production --watch true`
+      // );
       // Add pm2 save later - to it will run on start
     })
   
